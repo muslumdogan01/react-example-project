@@ -2,12 +2,18 @@ import React, { useState } from "react";
 
 function Header() {
   let [changeName, changeAutorized] = useState(false);
-  const title = "user App";
 
   return (
     <div className="header_content">
-      <p>Burası Header Componenti</p>
-      <h1>{title}</h1>
+      <div className="header_content_menu">
+        <ul className="header_content_menu_ul">
+          <li className="header_content_menu_ul_li">Anasayfa</li>
+          <li className="header_content_menu_ul_li">Hakkımızda</li>
+          <li className="header_content_menu_ul_li">Galeri</li>
+          <li className="header_content_menu_ul_li">İletişim</li>
+        </ul>
+      </div>
+
       {changeName ? (
         <p className="lead text-white text-bold">Authorized</p>
       ) : (
